@@ -1,9 +1,25 @@
+/* TOC - To find a section, Cmd-F/Ctrl-F doublehash + number
+    
+    Table of Contents:
+    1. All Elements/General Styles - ##1
+    2. Social/Navbar               - ##2
+    3. Image slider (to be added)  - ##3
+    4. Main Content Area           - ##4
+       b. Parallax                 - ##4b
+    5. Footer                      - ##5
+    
+
+
 /* apply a natural box layout model to all elements, but allowing components to change */
+
+/* 1. All Elements/General Styles - ##1 */
+
 html {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -12,6 +28,9 @@ html {
     margin: 0 auto;
     width: 100%;
 }
+
+
+/* 2. Social/Navbar               - ##2 */
 
 .nav a {
   color: #777;
@@ -23,24 +42,51 @@ html {
 
 .nav li {
   display: inline;
+  vertical-align:center;
 }
 
-.red{
-  background-color:black;
+.navbar-brand{
+    border: 1px solid black;
 }
-
-.blue{
-  background-color:blue;
-}
-
-/*
-.grey{
-  background-color:#e6e6e6;
-}
-*/
 
 .social{
   background-color:#5aa320;
+}
+
+
+
+.parallax [class*="bg__"] {
+  position: relative;
+  height: 80vh;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+}
+
+.parallax .bg__fore, .parallax .bg__back {
+  height: 100vh;
+}
+
+.parallax .bg__fore {
+  background-image: url(parralax0r1.jpg);
+}
+
+.parallax .bg__back {
+  background-image: url(parralax0r2.jpg);
+}
+
+.lead-title{
+  margin-top: 25px;
+}
+
+.lead-title h4{
+    font-size: 24px;
+}
+
+.lead-title hr{
+    border-color:#6ab42f;
+    width:75px;
+    border-width:3px;
 }
 
 .masthead{
@@ -50,38 +96,51 @@ html {
     background-color:transparent;
     border:none;
 }
+
+/* Fix needed for nav-pills mobile hack */
+.green{
+    padding-top:6px;
+}
+
 .green li a:hover{
     background-color:#5aa320;
     color: white;
-}
-
-.parallax{
-  background-color:orange;
-  height: 200px;
 }
 
 .center{
   padding-bottom: 20px;
 }
 
-.img-circle{
-    max-width:140px;
-    height:auto;
+
+.circle img{
+    width: 160px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;   
+    overflow: hidden;
+}
+
+.circle img:hover{
+    width: 170px;
+    height: auto;
+/*     -webkit-filter: blur(.25px); */
 }
 
 .image-slider{
-    height: 400px;
-    overflow:hidden;
+    height: auto;
+    overflow: hidden;
 }
 
 .image-slider img{
-    max-width:90%;
+    max-width: 100%;
 }
-
 
 .social{
     list-style:none;
     position: static;
+    padding-left: 0px;
 }
 
 .social-icon{
@@ -100,5 +159,37 @@ html {
 
 .social li:last-child{
     margin-right: 20px;
+}
+
+.main{
+    background-color: #ededed;
+    border-top: 1px solid #ededed;
+}
+
+.tour{
+    background-color: #ededed;
+}
+
+.tour btn{
+    margin-left: 10px;
+}
+
+footer{
+    background-color:#222;
+    height: 250px;
+    color:white;
+    padding-top:100px;
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+    .navbar-collapse {
+        background-color:#cc5500;
+    }
+    
+    .nav a{
+        vertical-align: center;
+    }
 }
 
