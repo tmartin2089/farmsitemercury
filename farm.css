@@ -14,8 +14,8 @@ html {
 }
 
 .nav a {
-  color: #e6e6e6;
-  font-size: 11px;
+  color: #777;
+  font-size: .875 em;
   font-weight: bold;
   padding: 14px 10px;
   text-transform: uppercase;
@@ -26,16 +26,18 @@ html {
 }
 
 .red{
-  background-color:red;
+  background-color:black;
 }
 
 .blue{
   background-color:blue;
 }
 
+/*
 .grey{
   background-color:#e6e6e6;
 }
+*/
 
 .social{
   background-color:#5aa320;
@@ -44,8 +46,13 @@ html {
 .masthead{
     width:100%;
 }
+.transparent{
+    background-color:transparent;
+    border:none;
+}
 .green li a:hover{
     background-color:#5aa320;
+    color: white;
 }
 
 .parallax{
