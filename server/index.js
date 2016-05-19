@@ -10,7 +10,7 @@ var app = express();
 app.use(express.static('../client/public'));
 
 // Serve a browserified file for GET /bundle.js
-app.get('/scripts/bundle.js', browserify('../client/count.js'));
+app.get('/scripts/bundle.js', browserify('../client/app.js'));
 
 
 app.get('/', function(req, res){

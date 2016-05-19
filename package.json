@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "farm": "node server/index.js"
+    "start": "nodemon server/index.js"
   },
   "author": "TJ Martin <codeoverdose@gmail.com>",
   "license": "ISC",
@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "dom-delegator": "^13.1.0",
+    "mercury-router": "^1.4.0",
     "observ": "^0.2.0",
     "observ-array": "^3.2.1",
     "observ-struct": "^6.0.0",
