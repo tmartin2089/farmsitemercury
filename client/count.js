@@ -4,7 +4,6 @@ var document = require('global/document');
 //index is basically just the modules being used
 //you can pick and choose as needed
 var hg = require('../mercuryindex.js');
-console.log('found hg ',hg);
 //im the render method
 var h = require('../mercuryindex.js').h;
 
